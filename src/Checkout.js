@@ -99,8 +99,8 @@ const Checkout = () => {
           </tbody>
         </table>
         <h2>Order summary</h2>
-        <p>Discount: $ {(total > 1000 ? (total*0.1) : 0).toFixed(2)}</p>
-        <p>Total: $ {(total > 1000 ? (total - total*0.1) : total).toFixed(2)}</p>       
+        {total >= 1000 && <p>10% Discount: $ {(total*0.1).toFixed(2)}</p>}
+        <p>Total: $ {(total >= 1000 ? (total - total*0.1) : total).toFixed(2)}</p>       
       </main>
     </div>
   );
